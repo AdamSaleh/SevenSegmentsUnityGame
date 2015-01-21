@@ -33,6 +33,7 @@ public class PlayerScript : MonoBehaviour
       WeaponScript weapon = GetComponent<WeaponScript>();
       if (weapon != null && weapon.CanAttack)
       {
+				MenuScript.Tracking.Track("SHOT");
         weapon.Attack(false);
         SoundEffectsHelper.Instance.MakePlayerShotSound();
       }

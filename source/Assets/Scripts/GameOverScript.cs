@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 /// <summary>
 /// Start or quit the game
@@ -26,6 +27,8 @@ public class GameOverScript : MonoBehaviour
       ))
     {
       // Reload the level
+			MenuScript.Tracking.Track("RETRIED",new Dictionary<string,string>(){{"looser","has not given up"}});
+
       Application.LoadLevel("Stage1");
     }
 
