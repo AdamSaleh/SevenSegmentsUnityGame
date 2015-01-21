@@ -7,15 +7,13 @@ public class MenuScript : MonoBehaviour
 {
   private GUISkin skin;
 
-	public static SevenSegments.SevenSegments Tracking; 
+  public static Infinario.Infinario Tracking; 
   void Start()
   {
 		Debug.Log("STARTING");
-		Tracking = new SevenSegments.SevenSegments("d5b474ce-61b8-11e4-8f55-0cc47a049482","https://api.7segments.com",
-	                                           "testplayer000004");
+		Tracking = new Infinario.Infinario("d5b474ce-61b8-11e4-8f55-0cc47a049482");
 		Debug.Log("IDENTIFYING");
-		Tracking.Identify (
-			"testplayer000004",new Dictionary<string,string> () {{"email","player4@b.com"}});
+		Tracking.Identify ("testplayer000004");
 
     skin = Resources.Load("GUISkin") as GUISkin;
   }
