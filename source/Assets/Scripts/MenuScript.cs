@@ -11,7 +11,7 @@ public class MenuScript : MonoBehaviour
   void Start()
   {
 		Debug.Log("STARTING");
-		Tracking = new Infinario.Infinario("d5b474ce-61b8-11e4-8f55-0cc47a049482");
+		Tracking = new Infinario.Infinario("{TOKEN}");
 		Debug.Log("IDENTIFYING");
 		Tracking.Identify ("testplayer000004");
 
